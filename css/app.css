@@ -1,0 +1,459 @@
+body{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	background-color: white;
+}
+
+html{font-size:80%;}
+@media(min-width:1000px){html{font-size: 100%}}
+
+.flex-center{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.section{
+	position: relative;
+	background-color: transparent;
+}
+
+
+
+.text{
+	opacity: 0;
+	font-family: 'Cabin', sans-serif;
+	font-size: 1em;
+	text-align: center;
+
+	color: #37377e;
+	overflow: visible;
+	/*
+	background-color: #327477;
+	border-radius: 100%;
+	*/
+
+	position: absolute;
+	bottom: 0%;
+	left: 0%;
+	height: 10%;
+	width: 100%; 
+}
+
+
+/*********************************************  LAYERCAKE ***********/
+.layercake{
+	position: fixed;
+	top: 0%;
+	bottom: 0%;
+	left: 0%;
+	right: 0%;
+
+	background-color: white;
+	opacity: 0;
+	pointer-events: none;
+}
+.layer{
+	opacity: 0;
+	pointer-events: none;
+	background-color: white;
+	z-index: 600;
+}
+
+/*********************************************  SECTION 2 SLIDES ****/
+#section2{
+	position: relative;
+	width: 300%;
+}
+
+#vweslides{
+	position: relative;
+	left: 0%;
+
+	width: 100%;
+	height: 100%;
+}
+.vweslide{
+	position: absolute;
+	
+	width: 33.28%;
+	height: 100%;
+}
+
+#vweslide1{
+	left: 0%;
+}
+#vweslide2{
+	left: 33.28%;
+}
+#vweslide3{
+	left: 66.56%;
+}
+
+.vweslideCenter{
+	position: absolute;
+	top: 26%;
+	bottom: 26%;
+	left: 21%;
+	right: 21%;
+
+	background-color: #664e47;
+
+	background-image: url(../assets/greentrackmark.jpg);
+	background-size: 60% auto;
+	background-position: center;
+	background-repeat: repeat;
+
+	overflow: hidden;
+
+	
+}
+
+.veil{
+	position: absolute;
+	top: 26%;
+	bottom: 26%;
+	left: 21%;
+	right: 21%;
+	
+	background-color: white;
+	opacity: 0.6;
+	z-index: 200;
+	pointer-events: none;
+}
+.vweslideCaption{
+	position: absolute;
+	top: 26%;
+	bottom: 26%;
+	left: 21%;
+	right: 21%;
+
+	z-index: 400;
+	pointer-events: none;
+}
+.caption{
+	font-size: 8.2em;
+	text-align: center;
+
+	position: absolute;
+	top: 25%;
+	bottom: 25%;
+	left: -13%;
+	right: -13%;
+
+	white-space: nowrap;
+}
+.captionDark{
+	color: black;
+	opacity: 1;
+}
+.captionLight{
+	color: white;
+	opacity: 0;
+	z-index: 600;
+}
+
+
+/************************************** SECTION 1 */
+
+.mainone{
+	position: absolute;
+	top: 49px;
+	bottom: 49px;
+	left: 49px;
+	right: 49px;
+	background-color: #edecec;
+}
+
+.mainonebigtext{
+	position: absolute;
+	left: 21%;
+	right: 21%;
+	top: 25%;
+	bottom: 25%;
+	color: white;
+	font-size: 32px; 
+    font-size: 15vw;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.mainonecaption{
+	position: absolute;
+	left: 38%;
+	right: 38%;
+	top: 83%;
+	
+	color: black;
+	font-size: 32px; 
+    font-size: 2vw;
+    
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.underline{
+	position: absolute;
+	left: 47%;
+	right: 47%;
+	top: 90.5%;
+
+	border-bottom: solid;
+	border-color: black;
+	border-width: 2px;
+}
+
+
+/***************************************************************************** Section 3 *****/
+#section3{
+	
+
+	background-color: #664e47;
+
+	opacity: 0.2;
+	overflow: hidden;
+}
+
+/***************************************************************************** Side Nav Menu */
+
+.logocontainer{
+	position: absolute;
+	top: 3%;
+	left: 5%;
+/*
+	height: : 15%;
+	width: : 15%;*/
+	height: 6%;
+	width: 60%;
+
+	overflow: visible;
+	
+	z-index: 200;
+
+	background-image: url(../assets/logo.png);
+	background-size: auto 100%;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+.sidenavLogo{
+	position: relative;
+	top: 3%;
+	left: 5%;
+/*
+	height: : 15%;
+	width: : 15%;*/
+	height: 6%;
+	width: 60%;
+
+	overflow: visible;
+	
+	z-index: 300;
+
+	background-image: url(../assets/logow.png);
+	background-size: auto 100%;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+#openSidenav{
+	position: absolute;
+	top: 1.8%;
+	right: 1.8%;
+/*
+	height: : 15%;
+	width: : 15%;*/
+	height: 70px;
+	width: 90px;
+
+	overflow: visible;
+	opacity: 1;
+	z-index: 200;
+
+	background-image: url(../assets/menu.png);
+	background-size: 100% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.sidenavWrap{
+	position: absolute;
+	top: 112px;
+	bottom: 112px;
+	left: 112px;
+	right: 112px;
+
+	background-color: #0e1e4d;
+}
+
+.sidenavItems{
+	width: 60%;
+	height: 48%;
+
+	margin-left: 20%;
+	margin-right: 20%;
+
+	margin-top: 12%;
+	margin-bottom: 12%;
+
+	font-size: 28px;
+	font-weight: bolder;
+	text-align: center;
+
+	
+
+}
+.sidenavItem{
+	text-align: center;
+	height: 25%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.sidenavSocial{
+	width: 70%;
+	height: 10%;
+
+	position: relative;
+	top: 10%;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.sidenavSocialItem{
+	width: 46%;
+	float: left;
+	
+	font-size: 32px;
+	font-weight: lighter;
+	text-align: center;
+}
+
+
+ /* The side navigation menu */
+.sidenav {
+    /*height: 100%; /* 100% Full-height */
+    /*width: 100%; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 300; /* Stay on top */
+    top: 49px;
+	bottom: 49px;
+	left: 49px;
+	right: 49px;
+
+	background-color: #0043fe;
+    
+    opacity: 0;
+
+    overflow: visible;
+
+   /*background-color: #111;  Black*/
+    /*overflow-x: hidden; /* Disable horizontal scroll */
+    /*padding-top: 60px; /* Place content 60px from the top */
+    /*transition: 0s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+
+    color: white;
+    display: block;
+    /*transition: 0s*/
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: blue;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: -75px;
+    right: -28px;
+    font-size: 56px;
+    width: 90px;
+    /*margin-left: 50px;*/
+    text-align: left;
+    color: black;
+}
+
+#openSidenav{
+	position: fixed;
+    top: -5px;
+    right: -9px;
+    font-size: 38px;
+    width: 90px;
+    /*margin-left: 50px;*/
+    text-align: left;
+    color: black;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    /*transition: margin-left .5s;*/
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+} 
+
+
+
+/************************************************************************************** 2ND SECTION*/
+
+.legend{
+	line-height: 36px;
+	font-size: 26px;
+
+	height: 10%;
+	width: 100%;
+	
+	position: absolute;
+	top: 45%;
+
+}
+.pcenter{
+	position: absolute;
+	
+	width: 100%;
+
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.p11{
+	top: 2%;
+}
+.p12{
+	top: 48%;	
+}
+
+
+.references{
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	left: 0%;
+	right: 50%;
+
+	color: #d3d3d366;
+	font-size: 57px;
+}
+.reference{
+	height: 7.5%;
+}
+
+
+
+
