@@ -406,13 +406,11 @@ $(document).foundation()
 
 
 
-	/************************************************************************* project slides hover*/
+	/************************************************************************* Click and LAYERS ***/
+	/************************************************************************* and init positions */
 	const marginleft = 33.28;
-
-
-
 	$('.vweslideCenter').each(function(i, obj) {
-
+		// init Positions
     	$(this).css('left',function(i) { 
     		console.log(i);
     		var x = $(this).css('left') + i*marginleft + "%";
@@ -423,12 +421,29 @@ $(document).foundation()
     		return x; 
     	});
 
-    	$(this).click(function(i){
-    		console.log("clicked slide "+i);
-    		$('.layer').get(i).style.opacity = 1;
-    	});
+    	// Open Layer
+    	var clickparam={data:{t: i}};
+    	$(this).click(clickparam,function(){
+    		console.log("clicked slide "+clickparam.data.t);
+
+    		// open
+    		$('.layer').get(clickparam.data.t).style.opacity = 1;
+    		$('.layercake').get(0).style.opacity = 1;
+    		$('.layercake').css( 'pointer-events', 'auto' );
+
+    		// close
+    		$('.closelayer').click(function(){
+    			$('.layer').get(clickparam.data.t).style.opacity = 0;
+    			$('.layercake').get(0).style.opacity = 0;
+    			$('.layercake').css( 'pointer-events', 'none' );
+    		});
+    	});    	
 
 	});
+
+
+
+
 	$('.veil').each(function(i, obj) {
     	$(this).css('left',function(i) { 
     		var x = $(this).css('left') + i*marginleft + "%";
@@ -472,7 +487,7 @@ $(document).foundation()
 
 
 
-
+/************************************************************************* project slides hover*/
 
 	$('.vweslideCenter').mouseenter(function(){
 		console.log("hover on Armani")

@@ -4,6 +4,8 @@ body{
 	position: absolute;
 	overflow: hidden;
 	background-color: white;
+
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 html{font-size:80%;}
@@ -55,12 +57,31 @@ html{font-size:80%;}
 	background-color: white;
 	opacity: 0;
 	pointer-events: none;
+	z-index: 600;
 }
 .layer{
+	position: fixed;
+
 	opacity: 0;
+	height: 100%;
+	width: 100%;
 	pointer-events: none;
+	
+	z-index: 700;
+}
+.closelayer{
+	position: fixed;
+	top: 85%;
+	bottom: 10%;
+	left: 45%;
+	right: 45%;
+	z-index: 800;
 	background-color: white;
-	z-index: 600;
+}
+.centertext{
+	text-align: center;
+	vertical-align: middle;
+	line-height: auto;
 }
 
 /*********************************************  SECTION 2 SLIDES ****/
@@ -145,6 +166,8 @@ html{font-size:80%;}
 	right: -13%;
 
 	white-space: nowrap;
+
+	font-family: 'Playfair Display', serif;
 }
 .captionDark{
 	color: black;
