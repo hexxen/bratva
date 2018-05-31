@@ -15,7 +15,7 @@
 
   <body>    
 
-    <!--ul id="menu">
+    <!--ul id="menu" style="z-index: 1000;margin-top:20%;">
       <li data-menuanchor="anchor1"><a href="#anchor1">First slide</a></li>
       <li data-menuanchor="anchor2"><a href="#anchor2">Second slide</a></li>
       <li data-menuanchor="anchor3"><a href="#anchor3">Third slide</a></li>
@@ -27,7 +27,7 @@
       <div class="sidenavLogo"></div>
       
       <div class="sidenavWrap"> 
-        <div class="sidenavItems">
+        <div id="menu" class="sidenavItems">
           <a class="sidenavItem" href="#anchor1">BRATVA STUDIO</a>
           <a class="sidenavItem" href="#anchor2">REALISATIONS</a>
           <a class="sidenavItem" href="#anchor3">ATELIERS CREATIFS</a>
@@ -89,7 +89,7 @@
     </div>
 
     <div id="fullpage">
-        <div class="section" id="section0">
+        <div class="section" data-anchor="anchor1" id="section0">
 
           <div class="mainone">
 
@@ -106,7 +106,7 @@
   
 
         </div>
-        <div class="section fp-auto-height" id="section1">
+        <div class="section fp-auto-height" data-anchor="anchor2" id="section1">
             <div class="legend">
               <p class="pcenter p11">Le studio HenchMen est une agence créative basée entre Paris,</p>
               <br/>
@@ -129,17 +129,17 @@
               <div class="reference">PNP</div>
             </div>
         </div>
-        <div class="section fp-auto-height" id="section2">
+        <div class="section fp-auto-height" data-anchor="anchor3" id="section2">
             <div id="vweslides">
 
               <div class="vweslide" id="vweslide1">
                 
                 <div class="vweslideCenter">
-                  <p class="caption captionLight">Giorgio Armani Beauty</p>
+                  <p class="caption captionLight centertext">Giorgio Armani Beauty</p>
                 </div>
                 <div class="veil"></div>
                 <div class="vweslideCaption">
-                    <p class="caption captionDark">Giorgio Armani Beauty</p>
+                  <p class="caption captionDark">Giorgio Armani Beauty</p>
                 </div>
 
               </div>
@@ -167,7 +167,7 @@
 
             </div>
         </div>
-        <div class="section fp-auto-height" id="section3">
+        <div class="section fp-auto-height" data-anchor="anchor4" id="section3">
             
         </div>
     </div>

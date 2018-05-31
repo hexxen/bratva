@@ -8,8 +8,8 @@ $(document).foundation()
 	$('#fullpage').fullpage({
 		//Navigation
 		menu: '#menu',
-		lockAnchors: true,
-		anchors: ['anchor1', 'anchor2', 'anchor3'],
+		lockAnchors: false,
+		anchors: ['anchor1', 'anchor2', 'anchor3' , 'anchor4'],
 		navigation: false,
 		navigationPosition: 'right',
 		navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -336,6 +336,8 @@ $(document).foundation()
 	    document.getElementById("mySidenav").style.width = "100%";
 	    document.getElementById("fullpage").style.marginLeft = "100%";*/
 
+	    $('#fullpage').css( 'pointer-events', 'none' );
+
 	    $('#openSidenav').velocity({
     			opacity: 0
 			},{
@@ -368,13 +370,15 @@ $(document).foundation()
 				duration: 200
 		});
 		*/
-		$.fn.fullpage.setAllowScrolling(false);
-		$.fn.fullpage.setKeyboardScrolling(false);
+		//$.fn.fullpage.setAllowScrolling(false);
+		//$.fn.fullpage.setKeyboardScrolling(false);
 
 	}
 
 	/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 	function closeNav() {
+		console.log("FullPage state: "+$('#fullpage').autoScrolling)
+
 		document.getElementById("openSidenav").style.opacity = "1";
 	    
 		$('#mySidenav')
@@ -398,10 +402,15 @@ $(document).foundation()
 	    /*document.getElementById("fullpage").style.marginLeft = "0%";
 		*/
 
-		$.fn.fullpage.setAllowScrolling(true);
-		$.fn.fullpage.setKeyboardScrolling(true);
-	} 
+		//$.fn.fullpage.setAllowScrolling(true);
+		//$.fn.fullpage.setKeyboardScrolling(true);
+		$('#fullpage').css( 'pointer-events', 'auto' );
+	}
 
+	$(".sidenavItem").each(function(){
+
+		$(this).click(closeNav);
+	});
 
 
 
@@ -492,47 +501,53 @@ $(document).foundation()
 	$('.vweslideCenter').mouseenter(function(){
 		console.log("hover on Armani")
 		//document.getElementById("captionDark").style.zIndex = "100";
-		$('.captionDark').css('z-index', 100);
+		$('.vweslideCenter').css('z-index', 1000);
 		
 		$('.vweslideCenter').velocity({
-				'background-size': "80% auto"
+				'background-size': "80% auto",
+				left: "18%",
+				right: "18%"
 			},{
-				duration: 600
+				duration: 100,
+				easing: "easeOutSine"
 		});
 
 		$('.captionLight').velocity({
 				opacity: "1"
 			},{
-				duration: 600
+				duration: 400
 		});
 
 		$('.veil').velocity({
 				opacity: "0"
 			},{
-				duration: 600
+				duration: 300
 		});
 
 	});
 	$('.vweslideCenter').mouseleave(function(){
 		console.log("hover out")
 		//document.getElementById("captionDark").style.zIndex = "300";
-		$('.captionDark').css('z-index', 300);
+		$('.vweslideCenter').css('z-index', 1);
 		
 		$('.vweslideCenter').velocity({
-				'background-size': "60% auto"
+				'background-size': "60% auto",
+				left: "21%",
+				right: "21%"
 			},{
-				duration: 600
+				duration: 200,
+				easing: "easeOutSine"
 		});
 
 		$('.captionLight').velocity({
 				opacity: "0"
 			},{
-				duration: 600
+				duration: 300
 		});
 	
 		$('.veil').velocity({
 				opacity: "0.6"
 			},{
-				duration: 600
+				duration: 300
 		});
 	});
